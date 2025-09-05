@@ -1,6 +1,16 @@
-let point = { x: 0, y: 0 };
-let coloredPoint = { color: "red" };
+class Book {
+  constructor(author){
+    this.author = author
+  }
 
-Object.setPrototypeOf(coloredPoint, point);
+  get writer(){
+    return this.author;
+  }
 
-console.log(coloredPoint.color);
+  set writer (updatedWriter){
+    this.author = updatedWriter;
+  }
+}
+
+const chamber = new Book("chamber");
+console.log(chamber.writer)
