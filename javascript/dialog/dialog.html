@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert Test</title>
+</head>
+<body>
+    <script>
+        // alert
+        alert("Hello, World!")
+
+        //confirm
+        let remove = confirm("Remove all data?");
+        let message = remove ? "Deleting Data" : "Cancelled"
+        console.log(message);
+
+        //prompt
+        let name = prompt("What is your name?", "John Doe");
+        name = name ? name : "anonymous";
+        let age = prompt("Hello " + name + " how old are you?");
+        alert(name + " is " + age + " years old");
+    </script>
+</body>
+</html>
