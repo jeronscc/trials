@@ -1,16 +1,16 @@
-class Book {
-  constructor(author){
-    this.author = author
-  }
+class Person {
+    talk() {
+        console.log("Talking");
+    }
+}
+const me = new Person();
+me.talk()
 
-  get writer(){
-    return this.author;
-  }
-
-  set writer (updatedWriter){
-    this.author = updatedWriter;
-  }
+class SuperHuman extends Person{
+    fly() {
+        console.log("Flying");
+    }
 }
 
-const chamber = new Book("chamber");
-console.log(chamber.writer)
+const you = new SuperHuman();
+you.talk()

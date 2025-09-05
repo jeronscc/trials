@@ -93,4 +93,63 @@ class Vehicle {
 
 let v = new Vehicle({id: "AL1024", latitude: 59.3, longitude: 18.2});
 console.log(v.getPosition());  // ✅ works
-console.log(v.#longitude);     // ❌ SyntaxError
+// console.log(v.#longitude);     // ❌ SyntaxError
+
+// Inheritance 
+// the child doesnt define a constructor so it autoamtically inherits the constructor of the parent (Human)
+// so in this example "super" keyword is not used
+class Human {
+    constructor(name) {
+      this.name = name; // property initialized in constructor
+  }
+  talk() {
+    console.log("Talking");
+  }
+}
+const myself = new Human();
+me.talk()
+
+class SuperHuman extends Human{
+  fly() {
+      console.log("Flying");
+  }
+}
+
+const you = new SuperHuman();
+you.talk()
+
+// if you add your own constructor in the child, you must also initialize the parent’s properties.
+// Properties in the parent constructor → only inherited if:
+// 1. The child doesn’t define its own constructor, OR
+// 2. The child calls super(...) in its constructor
+
+class Automobile {
+    constructor({id, type}) {
+        this.id = id;       // property initialized in constructor
+        this.type = type;
+    }
+
+    start() {
+        console.log(`${this.type} ${this.id} is starting`);
+    }
+
+    stop() {
+        console.log(`${this.type} ${this.id} is stopping`);
+    }
+}
+
+class Bus extends Automobile {
+    constructor({id, type, seats}) {
+        super({id, type});   // calls parent constructor to initialize id and type
+        this.seats = seats;  // child-only property
+    }
+
+    openDoors() {
+        console.log(`Bus ${this.id} with ${this.seats} seats has its doors open`);
+    }
+}
+
+const bus1 = new Bus({id: "B101", type: "Bus", seats: 40});
+bus1.start();
+bus1.openDoors();  
+console.log(bus1.id)

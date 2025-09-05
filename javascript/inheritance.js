@@ -1,1 +1,0 @@
-// for objects literals use Object.create(proto)
