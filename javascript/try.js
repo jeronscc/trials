@@ -1,16 +1,3 @@
-class Person {
-    talk() {
-        console.log("Talking");
-    }
-}
-const me = new Person();
-me.talk()
+let x = [2,3,4,5,6]
 
-class SuperHuman extends Person{
-    fly() {
-        console.log("Flying");
-    }
-}
-
-const you = new SuperHuman();
-you.talk()
+console.log(Math.min(...x))

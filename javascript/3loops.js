@@ -28,7 +28,7 @@ console.log(sum); // -> 190
 //for loop
 const agents = ["Jett", "Sova", "Chamber", "Raze", "Reyna", "Waylay", "Yoru"]
 let valorant = []
-for (i=0; i < agents.length; i++){
+for (let i=0; i < agents.length; i++){
     valorant.push(agents[i]);
     console.log(agents[i])
 }
@@ -38,7 +38,7 @@ console.log(valorant)
 // for loop
 const numbers = [1, 2, 3, 4]
 const array = []
-for (i=0; i < numbers.length; i ++) {
+for (let i=0; i < numbers.length; i ++) {
     array.push(numbers[i])
     
 }console.log(array)

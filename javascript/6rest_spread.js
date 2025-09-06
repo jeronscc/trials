@@ -1,11 +1,11 @@
-// rest ()
+// rest (grabs all remaining keys into a new object)
 
 function convertToArray (...args) {
     console.log(args)
 }
 convertToArray(2,3,4)
 
-// spread
+// spread (copies or merges objects)
 
 const numbers = [1, 2, 3]
 console.log(...numbers)
@@ -35,7 +35,7 @@ var y = voxel.y;
 var z = voxel.z; 
 console.log(x,y,z)
 
-// destrucutring 
+// destrucutring (pulls specific keys into variables)
 const { x : a, y : b, z : c } = voxel;
 console.log(a,b,c)
 
