@@ -37,3 +37,13 @@ console.log(sum)
 let max = numbers.reduce((acc, num) => acc > num ? acc : num, numbers[0]);
 
 console.log(max);
+
+
+// .sort
+let numberss = [10, 5, 100, 1];
+
+numberss.sort((a, b) => a - b); // ascending
+console.log(numberss); // -> [1, 5, 10, 100]
+
+numberss.sort((a, b) => b - a); // descending
+console.log(numberss); // -> [100, 10, 5, 1]
