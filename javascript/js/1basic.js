@@ -65,3 +65,15 @@ pets.has("cat") // true
 pets.add("hamster")
 pets.delete("dog")
 pets.clear() // empties the set
+
+// call, apply, bind
+function show(msg) {
+  console.log(`${msg}: ${this.x},${this.y}`);
+}
+
+let point = { x: 10, y: 20 };
+
+show.call(point, "coords");   // coords: 10,20
+show.apply(point, ["coords"]); // same but args in array
+let bound = show.bind(point);  // returns new function
+bound("coords"); // coords: 10,20
