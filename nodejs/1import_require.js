@@ -8,7 +8,7 @@
 // math.js
 module.exports = {add: (a, b) => a + b};
 
-// app.js 
+// app.js (require() assumes that scripts have a file extension of .js so below does not ahve one)
 const math = require("./math");
 console.log(math.add(2, 3))
 
