@@ -1,3 +1,4 @@
+// initialization of arrays and variables
 const colors = [
   "red",
   "blue",
@@ -18,10 +19,12 @@ let score = 0;
 let timeLeft = 30;
 let gameInterval;
 
+// DOM element selection
 const startbtn = document.getElementById("startbtn");
 const gameContainer = document.getElementById("game-container");
 const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
+
 
 function generateCards() {
   for (const color of cards) {
@@ -96,4 +99,5 @@ function startGameTimer(timeLeft) {
     }
   }, 1000);
 }
-   startbtn.addEventListener('click', startGame);
+
+startbtn.addEventListener('click', startGame);

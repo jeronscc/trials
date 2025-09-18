@@ -86,3 +86,5 @@ Object {} → key-value store, keys unique
 Set new Set() → unique values only, no keys, easy existence check
 Map new Map() → key-value store, keys can be any type, ordered
 */
+
+// use axios/fetch() instead of xmlhttprequest (xhr) for http request
